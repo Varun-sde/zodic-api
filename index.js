@@ -45,7 +45,7 @@ async function apiCall(d, m, year) {
             const regex = /(\w+) rashi(?:.*?upto (\w+ \d+), (\d{1,2}:\d{2} [APM]{2}) before entering (\w+) rashi)?/;
             const match = input.match(regex);
             if (match) {
-              return `${convertZodiac(match[1])} (After ${match[3]} (${convertZodiac(match[4]}))`;
+              return `${convertZodiac(match[1])} (${convertZodiac(match[4])} - After (${match[3]}))`;
             } else {
               return "No match found";
             }
